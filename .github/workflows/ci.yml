@@ -95,6 +95,6 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: us-central1-docker.pkg.dev/cicd-ml0002/cs1660spring/dockerrepo/fastapi-server:v2
+          tags: us-central1-docker.pkg.dev/cicd-ML0002/cs1660spring/dockerrepo/fastapi-server:v2
 
 
