@@ -74,7 +74,7 @@ jobs:
         id: auth
         name: Authenticate to GCP
         with:
-          project_id: 'cicd-ML0002' # update with your project ID
+          project_id: 'cicd-ml0002' # update with your project ID
           workload_identity_provider: 'projects/349155758567/locations/global/workloadIdentityPools/github-actions-cloud-run/providers/github' # update with your Workload Identity Pool
         #  service_account: 'cs1660cicd@cs1660spring.iam.gserviceaccount.com'
 
@@ -95,6 +95,6 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: us-central1-docker.pkg.dev/cicd-ML0002/cs1660spring/dockerrepo/fastapi-server:v2
+          tags: us-central1-docker.pkg.dev/cicd-ml0002/cs1660spring/dockerrepo/fastapi-server:v2
 
 
