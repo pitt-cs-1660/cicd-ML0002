@@ -74,7 +74,7 @@ jobs:
         id: auth
         name: Authenticate to GCP
         with:
-          project_id: 'cicd-ml0002' # update with your project ID
+          project_id: 'CS1660Spring' # update with your project ID
           workload_identity_provider: 'projects/349155758567/locations/global/workloadIdentityPools/github-actions-cloud-run/providers/github' # update with your Workload Identity Pool
         #  service_account: 'cs1660cicd@cs1660spring.iam.gserviceaccount.com'
 
