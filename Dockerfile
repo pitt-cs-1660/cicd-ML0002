@@ -17,10 +17,7 @@ COPY --from=builder /usr/local/bin/poetry /usr/local/bin/poetry
 
 COPY . /app
 
-
 EXPOSE 8000
-
-ENTRYPOINT ["sh", "/app/entrypoint.sh"]
 
 CMD ["uvicorn", "cc_compose.server:app", "--reload", "--host", "0.0.0.0", "--port", "8000"]
 
