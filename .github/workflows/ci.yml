@@ -75,24 +75,26 @@ jobs:
          name: Authenticate to GCP
          with:
          project_id: 'cicd-ML0002' # update with your project ID
-         workload_identity_provider: 'projects/349155758567/locations/global/workloadIdentityPools/github-actions-cloud-run/subject/SUBJECT_ATTRIBUTE_VALUE' # update with your Workload Identity Pool
+         workload_identity_provider: 'projects/349155758567/locations/global/workloadIdentityPools/github-actions-cloud-run/providers/my-provider' # update with your Workload Identity Pool
          service_account: 'cs1660cicd@cs1660spring.iam.gserviceaccount.com'
 
-#      # configure/login with docker
-#      - name: gcloud Configure Docker
-#        run: gcloud auth configure-docker [YOUR REGION e.g. us-central1]-docker.pkg.dev
+     # configure/login with docker
+     - name: gcloud Configure Docker
+       run: gcloud auth configure-docker us-central1-docker.pkg.dev
 
-#      # setup docker buildx
-#      - name: Setup docker buildx
-#        uses: docker/setup-buildx-action@v3
-#        with:
-#          platforms: linux/amd64,linux/arm64
+     # setup docker buildx
+     - name: Setup docker buildx
+       uses: docker/setup-buildx-action@v3
+       with:
+         platforms: linux/amd64,linux/arm64
 
-#      # build and push the image
-#      - name: Build and Push
-#        uses: docker/build-push-action@v6
-#        with:
-#          context: ./
-#          file: ./Dockerfile
-#          push: true
-#          tags: [YOUR REGION e.g. us-central1]-docker.pkg.dev/cc-spring2025/dansc0de/fastapi-server:v2
+     # build and push the image
+     - name: Build and Push
+       uses: docker/build-push-action@v6
+       with:
+         context: ./
+         file: ./Dockerfile
+         push: true
+         tags: us-central1-docker.pkg.dev/cicd-ML0002/dockerrepo/fastapi-server:v2
+
+
