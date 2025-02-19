@@ -12,6 +12,7 @@ from cc_compose.database import init_db, get_db_connection
 init_db()
 
 app = FastAPI()
+app = FastAPI(redirect_slashes=False)
 
 # mount UI static files
 app.mount("/static", StaticFiles(directory="static"), name="static")
