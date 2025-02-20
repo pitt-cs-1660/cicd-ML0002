@@ -76,7 +76,7 @@ jobs:
         with:
           project_id: 'CS1660Spring' # update with your project ID
           workload_identity_provider: 'projects/349155758567/locations/global/workloadIdentityPools/github-actions-cloud-run/providers/github' # update with your Workload Identity Pool
-          # service_account: 'cs1660cicd@cs1660spring.iam.gserviceaccount.com'
+          service_account: 'cs1660cicd@cs1660spring.iam.gserviceaccount.com'
 
       # configure/login with docker
       - name: gcloud Configure Docker
